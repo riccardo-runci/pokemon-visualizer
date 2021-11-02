@@ -6,5 +6,6 @@ target 'pokemon-visualizer' do
   use_frameworks!
 
   # Pods for pokemon-visualizer
+  pod 'Alamofire'
 
 end
