@@ -22,3 +22,6 @@ Bonus Tasks:
 - Personalize the project with something that may be useful to this app ✅ 
   - I added a simple bookmark management ⭐
   - Support for light and dark mode ⭐
+
+## App explained
+Structurally the app uses the MVVM pattern, with a Model that represents the data shown to the user, a ViewController that takes care of showing it to the user, and a ViewModel that work as a bridge and make the data management. The UI is completely managed without the use of Storyboards or XIBs (except for the launchscreen) and hierarchically has a main View that contains the bottom bar where the user can select to show the entire list of pokemon or his favorites. The main view has a container as a child where the view to be displayed is loaded. They both use the TableView to show the pokemon list to the user. I tried to make it as versatile and reusable as possible. When tapped on a pokemon, a modal is shown with the basic information of the pokemon. API requests are made through the Alamofire library, just because I am faimiliar with it.
