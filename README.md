@@ -10,8 +10,13 @@ Developed for Telepass digital iOS Test
 Requirements:
 - Use Swift 5.5 ✅ 
 - Use iOS 11 as Target SDK ✅ 
+- Use a few external libraries, and motivate their usage ✅ 
 - Use the MVVM pattern ✅ 
+- Use CocoaPods, Carthage, or SwiftPM, but motivate your choice into the README.md file ✅ 
 - The app’s UI must be dynamic and must support both iPhone and iPad without using XIBs or Storyboards ✅ 
+- Create a README.md file where you describe the project and your choices ✅ 
+- Put the project on a public repository on GitHub ✅ 
+- Check that your code correctly builds on the latest stable Xcode ✅ 
 
 Bonus Tasks:
 - Use one external library at most ✅ 
