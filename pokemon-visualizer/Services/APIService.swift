@@ -15,7 +15,17 @@ class APIService {
     let baseImageUrl = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork"
     
     func sendRequest<D: APIRequest,T>(_ request: D, type: T.Type, completionHandler: @escaping (Result<T, Error>) -> Void) where T: Decodable{
-        AF.request(request.endpoint, method: request.method, parameters: request.parameters).responseJSON { response in
+        if let cachedResponse = Cache.shared.getCachedResponse(request.getRequestUrl())?.data(using: .utf8){
+            do{
+                let result = try JSONDecoder().decode(type.self, from: cachedResponse)
+                completionHandler(.success(result))
+                return
+            }
+            catch{
+                print(error)
+            }
+        }
+        AF.request(request.getRequestUrl(), method: request.method).responseJSON { response in
             if let error = response.error {
                 completionHandler(.failure(error))
                 return
@@ -24,6 +34,9 @@ class APIService {
                 do{
                     let result = try JSONDecoder().decode(type.self, from: data)
                     completionHandler(.success(result))
+                    if let response = String(data: data, encoding: .utf8){
+                        Cache.shared.saveToCache(request.getRequestUrl(), response)
+                    }
                 }
                 catch{
                     print(error)
@@ -35,6 +48,4 @@ class APIService {
             }
         }
     }
-    
-    
 }

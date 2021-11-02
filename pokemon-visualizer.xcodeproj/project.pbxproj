@@ -41,6 +41,7 @@
 		ADBBE8DD272B521500929F8B /* BookmarskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBBE8DC272B521500929F8B /* BookmarskViewController.swift */; };
 		ADBBE8DF272B522B00929F8B /* BookmarsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBBE8DE272B522B00929F8B /* BookmarsViewModel.swift */; };
 		ADBBE8E1272B569900929F8B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBBE8E0272B569900929F8B /* BaseViewController.swift */; };
+		ADBBE8E32731885900929F8B /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBBE8E22731885900929F8B /* Cache.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +83,7 @@
 		ADBBE8DC272B521500929F8B /* BookmarskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarskViewController.swift; sourceTree = "<group>"; };
 		ADBBE8DE272B522B00929F8B /* BookmarsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarsViewModel.swift; sourceTree = "<group>"; };
 		ADBBE8E0272B569900929F8B /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		ADBBE8E22731885900929F8B /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +183,7 @@
 				AD500B1B272768DB0044942D /* APIServiceError.swift */,
 				ADBBE8CF272AE7BC00929F8B /* APIRequests.swift */,
 				ADBBE8D8272AFDAA00929F8B /* BookmarksManager.swift */,
+				ADBBE8E22731885900929F8B /* Cache.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -392,6 +395,7 @@
 				AD500B3B27283ED10044942D /* PokemonDetailViewModel.swift in Sources */,
 				AD500B34272816510044942D /* String+Extensions.swift in Sources */,
 				ADBBE8D2272AEF8400929F8B /* PokemonAbility.swift in Sources */,
+				ADBBE8E32731885900929F8B /* Cache.swift in Sources */,
 				AD500B2E2727FD690044942D /* PokemonListViewController.swift in Sources */,
 				AD500B1C272768DB0044942D /* APIServiceError.swift in Sources */,
 				AD500B14272766F80044942D /* Constants.swift in Sources */,

@@ -42,7 +42,7 @@ class LeftImageCaptionTableViewCell : UITableViewCell{
     
     func setup(imageUrl: String?, caption: String?){
         self.nameLabel.text = caption
-        self.avatarView.setImageFromUrl(url: imageUrl, placeholder: ImageLayout.avatarPlaceholder)
+        self.avatarView.setImageFromUrl(url: URL(string: imageUrl ?? ""), placeholder: ImageLayout.avatarPlaceholder)
     }
     
     private func setupView(){

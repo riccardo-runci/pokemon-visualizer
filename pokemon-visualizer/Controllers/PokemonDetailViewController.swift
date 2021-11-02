@@ -232,7 +232,7 @@ class PokemonDetailViewController: UIViewController {
     }
     
     func setupView(pokemonDetail: PokemonDetail){
-        self.avatarView.setImageFromUrl(url: pokemonDetail.imageUrl, placeholder: ImageLayout.avatarPlaceholder)
+        self.avatarView.setImageFromUrl(url: URL(string: pokemonDetail.imageUrl ?? ""), placeholder: ImageLayout.avatarPlaceholder)
         self.nameLabel.text = pokemonDetail.name?.capitalizingFirstLetter()
         if let hp = pokemonDetail.stats?.first(where: { $0.stat?.name == "hp"})?.baseStat {
             self.progressView.progress = 1
