@@ -44,8 +44,8 @@ extension UIImageView {
                    guard let data = result.pngData() else { return }
                    if FileManager.default.fileExists(atPath: fileURL.path) {
                        do {
+                           //removing old cached image
                            try FileManager.default.removeItem(atPath: fileURL.path)
-                           print("Removed old image")
                        } catch let removeError {
                            print("couldn't remove file at path", removeError)
                        }
